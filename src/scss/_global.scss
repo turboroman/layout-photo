@@ -1,0 +1,155 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1350px;
+}
+
+.btn-reset {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// ============
+
+.btn-full {
+  padding: 14px 17px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--white);
+  background-color: var(--orange);
+  border-style: solid;
+  border-width: 3px;
+  border-color: transparent;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--brown-dull);
+  }
+  &:active {
+    background-color: var(--orange);
+    border-color: var(--brown-bright);
+  }
+  &:focus {
+    background-color: var(--brown-bright);
+  }
+}
+
+.btn-empty {
+  padding: 15px 22px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--orange);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--orange);
+  }
+  &:active {
+    background-color: var(--brown-dull);
+    border-color: var(--orange);
+  }
+  &:focus {
+    background-color: var(--brown-bright);
+  }
+}
+
+.hashtag {
+  padding: 7px 15px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-right: 32px;
+  }
+  .btn-empty {
+    padding: 12px 18px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hashtag {
+    padding: 4px 7px;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .btn-full, .btn-empty {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

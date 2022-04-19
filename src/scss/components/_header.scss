@@ -1,0 +1,341 @@
+.header {
+  height: 80px;
+  font-family: 'TTFirsNeue';
+  font-weight: 400;
+  background-color: var(--black);
+
+  &__container {
+    padding-top: 23px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    padding-right: 85px;
+  }
+
+  &__social {
+    margin-top: 3px;
+    margin-left: auto;
+  }
+}
+
+.nav {
+  padding-left: 10px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 75px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--white);
+  }
+}
+
+.social {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__item {
+    fill: var(--orange);
+  }
+  &__link {
+    & svg {
+      height: 30px;
+      width: 30px;
+      fill: var(--grey);
+      &:hover {
+        fill: var(--orange);
+      }
+      &:focus {
+        fill: var(--brown-dull);
+      }
+      &:active {
+        fill: var(--brown-bright);
+      }
+    }
+  }
+}
+
+.header__search {
+  margin-left: auto;
+  display: none;
+}
+
+.search {
+  display: flex;
+  position: relative;
+  height: 25px;
+  width: 25px;
+  overflow: hidden;
+  transition: width .3s ease-in-out;
+
+  &__btn svg {
+    margin-right: 5px;
+    height: 25px;
+    width: 25px;
+  }
+
+  &__input {
+    width: 170px;
+    color: var(--white);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #E9E9E9;
+    transition: border-color .3s ease-in-out;
+
+    &:hover {
+      border-color: var(--orange);
+    }
+
+    &:active {
+      border-color: var(--brown-dull);
+    }
+
+    &:hover {
+      border-color: var(--brown-bright);
+    }
+  }
+
+  &__input::placeholder {
+    font-family: 'TTFirsNeue';
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.search.open {
+  width: 200px;
+}
+
+.nav-bottom {
+  padding-top: 12px;
+  padding-bottom: 15px;
+  display: none;
+  height: 45px;
+  background-color: #4a4a4a;
+
+  &__close svg {
+    display: none;
+  }
+
+  &__phone {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: 'TTFirsNeue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--white);
+  }
+}
+
+.burger {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & span {
+    height: 2px;
+    background-color: #fff;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    height: 2px;
+    background-color: #fff;
+  }
+
+  &::after {
+    width: 10px;
+  }
+}
+
+.burger-menu {
+  top: -610px;
+  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  height: 610px;
+  width: 100%;
+  background-color: var(--black);
+  transition: top .5s ease-in-out;
+
+  &__close {
+    padding-bottom: 20px;
+  }
+
+  &__close svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    font-family: 'TTFirsNeue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--white);
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__phone svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__phone span {
+    font-family: 'TTFirsNeue';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--orange);
+  }
+}
+
+.burger-menu.open {
+  top: 70px;
+}
+
+.burger-menu__link,
+.nav-bottom__link,
+.nav__link {
+  padding: 2px;
+  background-color: transparent;
+  transition: color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.burger-menu__link:hover,
+.nav-bottom__link:hover,
+.nav__link:hover {
+  color: var(--orange);
+}
+
+.burger-menu__link:active,
+.nav-bottom__link:active,
+.nav__link:active {
+  color: var(--white);
+  background-color: var(--brown-dull);
+}
+
+.burger-menu__link:focus,
+.nav-bottom__link:focus,
+.nav__link:focus {
+  color: var(--brown-bright);
+}
+
+
+@media (max-width: 1200px) {
+  .header {
+
+    &__container {
+      padding-top: 27px;
+    }
+
+    &__logo {
+      margin-right: auto;
+      padding-right: 0;
+      width: 166px;
+    }
+
+    &__social {
+      display: none;
+    }
+
+    &__search {
+      display: block;
+    }
+  }
+  .nav {
+    &__list {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__item:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__nav {
+    display: none;
+  }
+
+  .nav-bottom {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 70px;
+    &__container {
+      padding-top: 22px;
+      padding-bottom: 25px;
+    }
+    &__logo {
+      height: 18px;
+      width: auto;
+    }
+
+   
+  }
+
+  .nav-bottom {
+    padding-top: 15px;
+    &__list {
+      display: none;
+    }
+  }
+
+  .burger {
+    display: flex;
+  }
+}

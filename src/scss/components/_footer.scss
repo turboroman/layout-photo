@@ -1,0 +1,104 @@
+.footer {
+  background-color: var(--black);
+  &__container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between; 
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    &-img {
+      margin-bottom: 6px;
+      align-self: flex-start;
+    }
+    &-desc {
+      font-family: 'TTFirsNeue';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #e9e9e9;
+    }
+  }
+  &__desc {
+    margin-right: 125px;
+    width: 360px;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--grey);
+    & span {
+      color: grey;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__social-desc {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--grey);
+  }
+}
+
+@media (max-width:1200px) {
+  .footer {
+    &__desc {
+      margin-right: 0;
+      margin-left: 66px;
+    }
+    &__logo {
+      margin-top: 6px;
+    }
+    &__logo-img {
+      max-width: 166px;
+    }
+  }
+}
+
+@media (max-width:800px) {
+  .footer {
+    &__container {
+      padding-left: 27px;
+      padding-right: 25px;
+    }
+    &__desc {
+      display: none;
+    }
+  }
+}
+
+@media (max-width:500px) {
+  .footer {
+    &__container {
+      padding-top: 30px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      flex-direction: column-reverse;
+    }
+    &__social {
+      padding-bottom: 22px;
+    }
+    &__logo {
+      padding: 14px;
+      background-color: #4a4a4a;
+      &-img {
+        align-self: center;
+        height: 18px;
+      }
+      &-desc {
+        font-size: 10px;
+        line-height: 13px;
+      }
+    }
+
+  }
+}
